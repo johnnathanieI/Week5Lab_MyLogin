@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author johnn
  */
 public class AccountService {
-    public User login(String username, String password) {
+    public static User login(String username, String password) {
         if (Objects.equals(username, "abe") && Objects.equals(password, "password")) {
             return new User(username, null);
         }

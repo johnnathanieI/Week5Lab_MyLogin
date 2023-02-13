@@ -12,8 +12,27 @@
         <title>Login</title>
     </head>
     <body>
-        <form method="post" action="home">
-            
+        <h1>Login</h1>
+        <form method="post" action="login">
+            <label for="username">
+                Username:
+            </label>
+            <input type="text" name="username" id="username">
+            <br><label for="password">
+                Password:
+            </label>
+            <input type="password" name="password" id="password"><br>
+            <input type="submit" value="Log in">
         </form>
+        <%
+            String message = (String) request.getParameter("message");
+            if (message != null && message.isEmpty()) {
+        %>
+        <p>
+          <%= message%>
+        </p>
+        <%
+            }
+        %>
     </body>
 </html>
